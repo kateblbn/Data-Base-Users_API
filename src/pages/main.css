@@ -1,0 +1,37 @@
+.nav {
+    padding: 10px 0 0 10px;
+}
+
+.nav__home {
+    font-size: 20px;
+    margin: 20px 0 0 10px;
+    color:grey;
+    &:hover {
+        border-bottom: 1px solid blue;
+    }
+}
+.link, .info{
+    margin: 25px 0 0 25px;
+    font-size: 22px;
+}
+.title {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    color: rgb(117, 114, 114)
+}
+.link__names {
+    margin-bottom: 15px;
+}
+.link__name {
+    &:hover {
+        border-bottom: 1px solid  rgb(67, 67, 215);
+    }
+}
+#root {
+    background-image: url('../img/simple.jpg');
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+}
