@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './main.css'
+import { ContextApiData } from '../context/ContextApi';
 
 function TemplateInfo({usName, email, website, phone, address, city, suite}) {
     return (
@@ -18,23 +19,8 @@ function TemplateInfo({usName, email, website, phone, address, city, suite}) {
 function Users() {
     const { id } = useParams();
     const number = Number(id);
-    const [data, setData] = useState([])
-    const link = 'https://jsonplaceholder.typicode.com/users';
-    useEffect(() => {
-        try {
-            const user = async () => {
-                await fetch(link, {
-                    method: 'get'
-                })
-                    .then(responce => responce.json())
-                    .then(json => setData(json))
-            }
-            user()
-        } catch (error) {
-            console.log('Errors');
-        }
-    }, [link])
-    console.log(data);
+    const {data} = useContext(ContextApiData)
+
     const filterUsers = data.filter( (el) => el.id === number)
     console.log(filterUsers);
     const result = filterUsers.map( (el, i) => {

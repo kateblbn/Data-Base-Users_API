@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import './main.css'
+import { ContextApiData } from '../context/ContextApi';
 
 function Template({name, id}) {
     return (
@@ -11,22 +12,8 @@ function Template({name, id}) {
     )
 }
 function Home() {
-    const [data, setData] = useState([])
-    const link = 'https://jsonplaceholder.typicode.com/users';
-    useEffect( () => {
-        try {
-            const user = async () => {
-                await fetch(link, {
-                    method: 'get'
-                })
-                .then(responce => responce.json())
-                .then(json => setData(json))
-            }            
-            user()
-        } catch (error) {
-            console.log('Errors');
-        }
-    }, [])
+    const {data} = useContext(ContextApiData)
+
     const getData = data.map((el, i) => {
         return <Template name={el.name} id={el.id}/>
     })
