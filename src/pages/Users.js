@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import './main.css'
 import { ContextApiData } from '../context/ContextApi';
 
-function TemplateInfo({usName, email, website, phone, address, city, suite}) {
+function TemplateInfo({ usName, email, website, phone, address, city, suite }) {
     return (
         <div>
             <p className='title'>INFO</p>
@@ -19,12 +19,12 @@ function TemplateInfo({usName, email, website, phone, address, city, suite}) {
 function Users() {
     const { id } = useParams();
     const number = Number(id);
-    const {data} = useContext(ContextApiData)
+    const { data } = useContext(ContextApiData)
 
-    const filterUsers = data.filter( (el) => el.id === number)
+    const filterUsers = data.filter((el) => el.id === number)
     console.log(filterUsers);
-    const result = filterUsers.map( (el, i) => {
-            return <TemplateInfo usName={el.name} email={el.email} 
+    const result = filterUsers.map((el, i) => {
+        return <TemplateInfo usName={el.name} email={el.email}
             website={el.website} phone={el.phone} address={el.address.street} city={el.address.city} suite={el.address.suite} />
     })
     console.log(result);
