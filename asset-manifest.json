@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Oculus/static/css/main.d425eaa9.css",
-    "main.js": "/Oculus/static/js/main.7daa925e.js",
-    "static/media/simple.jpg": "/Oculus/static/media/simple.598d79823d01fd3234e1.jpg",
-    "index.html": "/Oculus/index.html",
-    "main.d425eaa9.css.map": "/Oculus/static/css/main.d425eaa9.css.map",
-    "main.7daa925e.js.map": "/Oculus/static/js/main.7daa925e.js.map"
+    "main.css": "/Data-Base-Users_API/static/css/main.d844774c.css",
+    "main.js": "/Data-Base-Users_API/static/js/main.7daa925e.js",
+    "static/media/simple.jpg": "/Data-Base-Users_API/static/media/simple.598d79823d01fd3234e1.jpg",
+    "index.html": "/Data-Base-Users_API/index.html",
+    "main.d844774c.css.map": "/Data-Base-Users_API/static/css/main.d844774c.css.map",
+    "main.7daa925e.js.map": "/Data-Base-Users_API/static/js/main.7daa925e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d425eaa9.css",
+    "static/css/main.d844774c.css",
     "static/js/main.7daa925e.js"
   ]
 }
